@@ -1,11 +1,12 @@
 window.addEventListener('load', function () {
    let preloader = document.getElementById('preloader');
-   let loadTime = performance.now(); // Время загрузки страницы в миллисекундах
-   let delay = Math.max(3000 - loadTime, 0); // Рассчитываем, нужна ли задержка
-
    if (preloader) {
+      document.documentElement.classList.add('loading'); // Add the loading class to <html>
+      let loadTime = performance.now(); // Page load time in milliseconds
+      let delay = Math.max(2000 - loadTime, 0); // Calculate the required delay
       setTimeout(() => {
          preloader.classList.add('loaded');
+         document.documentElement.classList.remove('loading'); // Remove loading
       }, delay);
    }
 });
