@@ -2325,6 +2325,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   background-color: #182B2B;
   padding-bottom: 185px;
   padding-top: 200px;
+  position: relative;
 }
 
 .page__content h1:not(.page__title),
@@ -2395,6 +2396,23 @@ body._touch .header .menu__list > li._active .menu__arrow {
   pointer-events: none;
   position: absolute;
   z-index: 1;
+}
+
+.page__element {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.page__element.left {
+  left: 0;
+  max-width: 61%;
+}
+
+.page__element.right {
+  right: 0;
+  max-width: 56%;
 }
 
 /* Footer */
@@ -3783,6 +3801,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .page__overlay {
     max-width: 55%;
+  }
+
+  .page__element.right {
+    bottom: 0;
+    top: auto;
   }
 }
 
