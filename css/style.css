@@ -2431,8 +2431,8 @@ body._touch .header .menu__list > li._active .menu__arrow {
   text-align: center;
 }
 
-.footer__menu li.menu-item.current-menu-item a,
-.footer__menu li.menu-item.current_page_item a {
+.footer__menu li.current-menu-item a,
+.footer__menu li.current_page_item a {
   color: #6A7D7F;
 }
 
@@ -2487,6 +2487,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
   transition: 0.3s ease 0s;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.footer__list li.current-menu-item a,
+.footer__list li.current_page_item a {
+  color: #172122;
 }
 
 /* Plyr video player */
