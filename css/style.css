@@ -1007,6 +1007,7 @@ a {
 }
 
 .header__blockLogo img {
+  border-radius: 16px;
   max-height: 100%;
   max-width: 100%;
 }
@@ -2101,6 +2102,111 @@ body._touch .header .menu__list > li._active .menu__arrow {
   transform: translate(-50%, -39.5%);
   top: 0;
   z-index: 0;
+}
+
+.about-us {
+  background-color: #EEF3F7;
+  border-radius: 100px;
+  color: #172122;
+  overflow: hidden;
+  margin: 140px auto 193px;
+  max-width: 1920px;
+  position: relative;
+}
+
+.about-us .n_container {
+  padding-bottom: 136px;
+  padding-top: 132px;
+  position: relative;
+  z-index: 1;
+  position: relative;
+}
+
+.about-us__sec-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 128px;
+  font-weight: 400;
+  line-height: 0.79;
+  margin-bottom: 38px;
+}
+
+.about-us__info {
+  max-width: 57%;
+  position: relative;
+  z-index: 2;
+}
+
+.about-us__info p {
+  font-family: "Archivo", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.32;
+}
+
+.about-us__info blockquote {
+  margin-bottom: 57px;
+  margin-top: 33px;
+  max-width: 97%;
+  padding: 31px 0 0 116px;
+  position: relative;
+}
+
+.about-us__info blockquote::before {
+  background: url("../images/svg/blockquote.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  left: 44px;
+  height: 51px;
+  position: absolute;
+  top: 0;
+  width: 53px;
+}
+
+.about-us__info blockquote p {
+  color: #16837C;
+  font-family: "Archivo", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.about-us__image {
+  bottom: 0;
+  max-height: 90%;
+  max-width: calc(45% - 3px);
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.about-us__elements {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.about-us__elements.left-top {
+  left: 0;
+  max-height: 57%;
+  max-width: 52%;
+  top: 0;
+}
+
+.about-us__elements.right-top {
+  right: 0;
+  max-height: 56%;
+  max-width: 56%;
+  top: 0;
+}
+
+.about-us__elements.right-bottom {
+  bottom: 0;
+  max-height: 101%;
+  max-width: 69%;
+  right: 0;
 }
 
 .team {
@@ -3234,6 +3340,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
     margin-top: 330px;
   }
 
+  .about-us__sec-title {
+    font-size: 90px;
+  }
+
   .team__sec-title {
     font-size: 90px;
     padding-top: 10px;
@@ -3354,6 +3464,20 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .auto-took-dev__text {
     font-size: 36px;
     margin-top: 30px;
+  }
+
+  .about-us__info blockquote {
+    margin-bottom: 35px;
+    margin-top: 25px;
+    padding-left: 93px;
+  }
+
+  .about-us__info blockquote::before {
+    left: 20px;
+  }
+
+  .about-us__info blockquote p {
+    font-size: 22px;
   }
 
   .page__blockText {
@@ -3571,6 +3695,23 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .main-functionality__itemPhone.left,
   .main-functionality__itemPhone.right {
     gap: 3%;
+  }
+
+  .about-us {
+    border-radius: 80px;
+  }
+
+  .about-us .n_container {
+    padding-bottom: 70px;
+    padding-top: 90px;
+  }
+
+  .about-us__sec-title {
+    font-size: 60px;
+  }
+
+  .about-us__info p {
+    font-size: 24px;
   }
 
   .team__sec-title {
@@ -4239,6 +4380,41 @@ body._touch .header .menu__list > li._active .menu__arrow {
     text-indent: 2rem;
   }
 
+  .about-us {
+    border-radius: 60px;
+    margin: 70px auto 140px;
+  }
+
+  .about-us .n_container {
+    padding-bottom: 50px;
+    padding-top: 60px;
+  }
+
+  .about-us__sec-title {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+
+  .about-us__info p {
+    font-size: 20px;
+  }
+
+  .about-us__info blockquote {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px 0 0 50px;
+  }
+
+  .about-us__info blockquote::before {
+    left: 10px;
+    height: 25px;
+    width: 28px;
+  }
+
+  .about-us__info blockquote p {
+    font-size: 18px;
+  }
+
   .team__sec-title {
     font-size: 45px;
   }
@@ -4423,6 +4599,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 48px;
   }
 
+  .header__blockLogo img {
+    border-radius: 8px;
+  }
+
   .select__current {
     font-size: 18px;
     line-height: 21px;
@@ -4444,6 +4624,19 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .iorelics .auto-took-dev__text {
     right: 20px;
+  }
+
+  .about-us__info {
+    max-width: 100%;
+  }
+
+  .about-us__image {
+    max-width: 90%;
+    opacity: 0.2;
+  }
+
+  .about-us__elements.right-bottom {
+    opacity: 0.2;
   }
 
   .page-not-found {
@@ -4554,6 +4747,41 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .main-functionality__sec-title {
     font-size: 32px;
+  }
+
+  .about-us {
+    border-radius: 30px;
+    margin: 50px auto 80px;
+  }
+
+  .about-us .n_container {
+    padding-bottom: 40px;
+    padding-top: 50px;
+  }
+
+  .about-us__sec-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .about-us__info p {
+    font-size: 16px;
+  }
+
+  .about-us__info blockquote {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 15px 0 0 35px;
+  }
+
+  .about-us__info blockquote::before {
+    left: 0;
+    height: 22px;
+    width: 25px;
+  }
+
+  .about-us__info blockquote p {
+    font-size: 15px;
   }
 
   .team__sec-title {
