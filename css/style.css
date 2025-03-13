@@ -2180,6 +2180,20 @@ body._touch .header .menu__list > li._active .menu__arrow {
   z-index: 0;
 }
 
+.js-effect-wrap-card {
+  --sz: min(90vh, clamp(360px, 60vw, 500px));
+  --fz: calc(0.032 * var(--sz));
+  --xv: 0;
+  --yv: 0;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.js-effect-wrap-card .js-effect-card {
+  transition: all 0.4s ease-out !important;
+  transform: rotateX(calc(1deg * var(--xv))) rotateY(calc(1deg * var(--yv))) !important;
+}
+
 .about-us {
   background-color: #EEF3F7;
   border-radius: 100px;
