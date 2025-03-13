@@ -414,6 +414,82 @@ template {
 
 /* ui */
 
+/* Cursor */
+
+body._touch #cursor,
+body._touch #aura {
+  display: none;
+}
+
+#cursor,
+#aura {
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 3, 2.33) opacity;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  z-index: 10000;
+}
+
+#cursor.opacity,
+#aura.opacity {
+  opacity: 0;
+}
+
+#cursor {
+  background-color: #16837c;
+  height: 6px;
+  transition: scale 0.3s;
+  transform: scale(1) translate(-3px, -3px);
+  width: 6px;
+}
+
+#cursor.hidden-hover,
+#cursor.button-hover,
+#cursor.hover {
+  height: 20px;
+  opacity: 0.6;
+  transform: translate(-10px, -10px);
+  width: 20px;
+}
+
+#cursor.circle-link {
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='40' height='40' viewBox='0 0 24 24' data-tags='arrow-up-right'%3e%3cg fill='%23fff' transform='scale(0.0234375 0.0234375)'%3e%3cpath d='M298.667 341.333h323.669l-353.835 353.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l353.835-353.835v323.669c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-426.667c0-5.803-1.152-11.307-3.243-16.341s-5.163-9.728-9.216-13.781c-0.043-0.043-0.043-0.043-0.085-0.085-3.925-3.925-8.619-7.083-13.781-9.216-5.035-2.091-10.539-3.243-16.341-3.243h-426.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z' /%3e%3c/g%3e%3c/svg%3e");
+  height: 42px;
+  transform: translate(-6px, -6px);
+  opacity: 1;
+  width: 42px;
+  z-index: 10;
+}
+
+.circle-link-cursor {
+  cursor: none;
+}
+
+#aura {
+  border: 1px solid #16837c;
+  height: 32px;
+  transform: translate(2px, 2px);
+  width: 32px;
+}
+
+#aura.circle-link {
+  background-color: #d90a2c;
+  border-radius: 50%;
+  border: none;
+  height: 60px;
+  opacity: 0.4;
+  width: 60px;
+  z-index: 9;
+}
+
+#cursor.hidden,
+#aura.hidden {
+  transform: scale(0.001);
+}
+
 html,
 body {
   height: 100%;
@@ -1554,14 +1630,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .download-agro-took__logos.logos-above {
-  margin-top: 41px;
-  max-width: 56%;
+  margin: -0.5% 0 -12.3% -1.1%;
+  max-width: 67%;
 }
 
 .download-agro-took__logos.logos-under {
   display: table;
-  margin: -6% 0 0 auto;
-  max-width: 52%;
+  margin: -8.9% -5.6% -4.8% auto;
+  max-width: 66%;
 }
 
 .download-agro-took__buttons {
@@ -1576,7 +1652,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   list-style: none;
   margin-left: 15px;
   margin-right: 15px;
-  width: 360px;
+  width: 370px;
 }
 
 .download-agro-took__buttons li a {
@@ -1697,7 +1773,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   pointer-events: none;
   position: relative;
   top: 50%;
-  transform: translate(-78%, -12%);
+  transform: translate(-78%, -12%) !important;
   z-index: 1;
 }
 
@@ -2099,7 +2175,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   max-width: 100%;
   pointer-events: none;
   position: absolute;
-  transform: translate(-50%, -39.5%);
+  transform: translate(-50%, -39.5%) !important;
   top: 0;
   z-index: 0;
 }
@@ -2309,7 +2385,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   left: 50%;
   pointer-events: none;
   position: absolute;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%) !important;
   top: 72px;
   z-index: -1;
 }
@@ -2508,6 +2584,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   margin: 36px 0 8px;
 }
 
+.page__content li,
 .page__content p {
   font-family: "Rubik", sans-serif;
   font-size: 14px;
@@ -2516,8 +2593,24 @@ body._touch .header .menu__list > li._active .menu__arrow {
   letter-spacing: 0.48px;
 }
 
+.page__content li:not(:last-child),
 .page__content p:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.page__content li a,
+.page__content p a {
+  color: inherit;
+}
+
+.page__content ol,
+.page__content ul {
+  margin-bottom: 22px;
+  padding-left: 20px;
+}
+
+.page__content li {
+  margin-bottom: 0 !important;
 }
 
 .page__item {
@@ -2531,15 +2624,21 @@ body._touch .header .menu__list > li._active .menu__arrow {
   font-weight: 400;
   line-height: 1.015;
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .page__blockText {
   background-color: #16837C;
   border-radius: 15px;
-  padding: 77px 38px 75px 46px;
+  padding: 30px 0 40px 46px;
   position: relative;
   width: 100%;
   z-index: 1;
+}
+
+.page__blockTextInfo {
+  padding-right: 38px;
 }
 
 .page__wrap-image {
@@ -2552,7 +2651,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   position: relative;
   width: 565px;
   max-width: 97%;
-  z-index: 0;
+  z-index: 1;
 }
 
 .page__overlay {
@@ -2909,7 +3008,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 55%;
   }
 
-  .page__blockText {
+  .page__blockTextInfo {
     margin-top: 18px;
     max-height: 638px;
     overflow-x: hidden;
@@ -2930,17 +3029,17 @@ body._touch .header .menu__list > li._active .menu__arrow {
     background-color: #16837C;
   }
 
-  .page__blockText::-webkit-scrollbar {
+  .page__blockTextInfo::-webkit-scrollbar {
     width: 4px;
   }
 
-  .page__blockText::-webkit-scrollbar-thumb {
+  .page__blockTextInfo::-webkit-scrollbar-thumb {
     background-color: #fff;
     border-radius: 4px;
   }
 
-  .page__blockText {
-    max-height: 705px;
+  .page__blockTextInfo {
+    max-height: 690px;
   }
 }
 
@@ -3106,8 +3205,8 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 @media screen and (min-width: 1201px) {
-  .page__blockText {
-    max-height: 860px;
+  .page__blockTextInfo {
+    max-height: 810px;
   }
 }
 
@@ -3481,7 +3580,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .page__blockText {
-    padding: 40px 35px;
+    padding: 30px 0 40px 35px;
+  }
+
+  .page__blockTextInfo {
+    padding-right: 35px;
   }
 
   .page__image {
@@ -4167,6 +4270,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .iorelics .auto-took-dev__text {
     right: 25px;
   }
+
+  .page__blockText {
+    padding-top: 40px;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -4709,12 +4816,13 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .download-agro-took__logos.logos-above {
-    max-width: 100%;
+    max-width: 120%;
     margin-top: 20px;
   }
 
   .download-agro-took__logos.logos-under {
-    max-width: 100%;
+    max-width: 130%;
+    margin: 0 -5.6% -15% -16%;
   }
 
   .iorelics .auto-took-dev__text {
