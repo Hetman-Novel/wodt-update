@@ -7,18 +7,19 @@
    <link rel="icon" type="image/svg+xml" href="images/svg/favicon.svg">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&_v=20250313192600" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap&_v=20250313192600" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap&_v=20250313192600" rel="stylesheet">
-   <link rel="stylesheet" href="files/aos/aos.css?_v=20250313192600">
-   <link rel="stylesheet" href="css/style.min.css?_v=20250313192600">
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&_v=20250315005711" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap&_v=20250315005711" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap&_v=20250315005711" rel="stylesheet">
+   <link rel="stylesheet" href="files/aos/aos.css?_v=20250315005711">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20250315005711">
+   <link rel="stylesheet" href="css/style.min.css?_v=20250315005711">
    <title>Home - World of digital technology</title>
-   <script src="files/js/loading.js?_v=20250313192600"></script>
+   <script src="files/js/loading.js?_v=20250315005711"></script>
 </head>
 
 <body>
 	<div class="wrapper">
-		<!--<div id="preloader" class="loading">
+		<div id="preloader" class="loading">
 	<div class="n_container">
 		<div class="loading__block">
 			<div class="wrap-svg">
@@ -32,7 +33,7 @@
 			<p>Loading... Please wait.</p>
 		</div>
 	</div>
-</div>-->
+</div>
 <div id="cursor" class="opacity"></div>
 <div id="aura" class="opacity"></div>
 <header class="header">
@@ -120,23 +121,41 @@
 			<section class="first-screen">
 				<div class="n_container">
 					<div class="first-screen__wrap-title">
-						<h1 class="first-screen__title">world<br> <span class="center">of digital</span><br> <span class="last">technology</span></h1>
+						<h1 class="first-screen__title">
+							<span class="first custom-animation">world</span><br> <span class="custom-animation center">of digital</span><br> <span class="custom-animation last">technology</span>
+						</h1>
 						<div class="first-screen__wrap-button link-anchor">
-							<a class="first-screen__button" href="#contacts">
+							<a class="first-screen__button custom-animation" href="#contacts">
 								<span>contact us</span>
 							</a>
 						</div>
-						<img class="first-screen__illustration" src="images/fs-illustration.png" alt="">
+						<img class="first-screen__illustration custom-animation" src="images/fs-illustration.png" alt="">
 						<img class="first-screen__overlay" src="images/fs-overlay.png" alt="">
 					</div>
-					<ul class="first-screen__list">
-						<li class="active">We create user-friendly and</li>
-						<li>modern apps that simplify life</li>
-						<li>and help businesses grow. </li>
-						<li>Our team combines experience and</li>
-						<li>new technologies to turn ideas</li>
-						<li>into useful digital products.</li>
-					</ul>
+					<div data-aos="fade-in" id="fs-list-slider" class="first-screen__slider">
+						<div class="first-screen__list swiper-wrapper">
+							<div class="swiper-slide">
+								<p>We create user-friendly and</p>
+							</div>
+							<div class="swiper-slide">
+								<p>modern apps that simplify life</p></div>
+							<div class="swiper-slide">
+								<p>and help businesses grow.</p>
+							</div>
+							<div class="swiper-slide">
+								<p>Our team combines experience and</p>
+							</div>
+							<div class="swiper-slide">
+								<p>new technologies to turn ideas</p>
+							</div>
+							<div class="swiper-slide">
+								<p>into useful digital products.</p>
+							</div>
+							<div class="swiper-slide">
+								<p>We create user-friendly and</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<img class="first-screen__bg" src="images/fs-bg.png" alt="">
 			</section>
@@ -197,13 +216,13 @@
 						<h2 data-aos="fade-left" class="problem-statement__sec-title">Problem<br> Statement</h2>
 						<div class="main-functionality__items">
 							<div class="main-functionality__item">
-								<div class="main-functionality__column padding-left-to-mobile padding-left-mobile width-mobile-50">
+								<div class="main-functionality__column padding-left-to-mobile padding-left-mobile padding-right-mobile width-mobile-100">
 									<p data-aos="fade-in" class="main-functionality__number">[01]</p>
 									<h3 data-aos="fade-in" class="main-functionality__title">Lack of a centralized platform for interaction between producers, buyers and suppliers.</h3>
 									<p data-aos="fade-in" class="main-functionality__text">There is a clear problem with coordination between the key players in the market - producers, buyers and suppliers. The lack of a unified platform leads to chaotic communications, fragmented processes and the inability to build effective collaboration. Manufacturers struggle to find the right buyers, buyers face problems finding reliable suppliers, and suppliers cannot respond quickly to market demands. This fragmentation reduces the efficiency of transactions and increases costs for all parties.</p>
 								</div>
 								<div class="main-functionality__column hidden-mobile"></div>
-								<div class="main-functionality__column vertical-bottom padding-right-to-mobile padding-right-mobile width-mobile-50">
+								<div class="main-functionality__column vertical-bottom padding-right-to-mobile padding-left-mobile padding-right-mobile width-mobile-100">
 									<p data-aos="fade-in" class="main-functionality__number">[02]</p>
 									<h3 data-aos="fade-in" class="main-functionality__title">Problems with price transparency and availability of information on supply and demand.</h3>
 									<p data-aos="fade-in" class="main-functionality__text">In many markets, there is a lack of clarity in pricing, leading to mistrust between market participants. Buyers are often unaware of actual market prices, and producers and suppliers lose the opportunity to offer their services or goods at competitive rates. In addition, information on supply and demand is incomplete or unavailable, making it difficult to plan and make strategic decisions. All of this reduces the overall efficiency of the market and increases risks for all parties.</p>
@@ -231,7 +250,7 @@
 								<div class="main-functionality__column padding-left-mobile padding-right-to-mobile padding-right-mobile width-mobile-100">
 									<div class="wrap-text-column-one"></div>
 									<div class="wrap-text-column">
-										<p data-aos="fade-in" class="main-functionality__text">The welcome screen reminds you that you are always welcome! A simple message creates a warm atmosphere and a large “Go to the main page” button makes it easy to navigate to the main functions of the app.</p>
+										<p data-aos="fade-in" class="main-functionality__text">The application's profile screen gives the user easy access to personal information and basic functions.</p>
 									</div>
 									<img data-aos="fade-in" class="img-margin-top" src="images/problem-statement-phone-3.png" alt="">
 								</div>
@@ -242,7 +261,7 @@
 								</div>
 								<div class="main-functionality__column center-column padding-left-mobile padding-right-mobile width-mobile-100">
 									<div class="wrap-text-column-two wrap-text-column">
-										<p data-aos="fade-in" class="main-functionality__text">The application's profile screen gives the user easy access to personal information and basic functions.</p>
+										<p data-aos="fade-in" class="main-functionality__text">The welcome screen reminds you that you are always welcome! A simple message creates a warm atmosphere and a large “Go to the main page” button makes it easy to navigate to the main functions of the app.</p>
 										<p data-aos="fade-in" class="main-functionality__text">The app's chat screen makes it easy to navigate thanks to its simple and user-friendly design. The user can filter messages by “Purchase” and “Sale” categories, search for desired chats via the search bar and quickly browse the list of conversations where avatars, names and recent messages are displayed.</p>
 									</div>
 									<img data-aos="fade-in" src="images/problem-statement-phone-5.png" alt="">
@@ -430,48 +449,78 @@
 				<img class="auto-took-dev__overlay green" src="images/auto-took-dev-overlay-green.png" alt="">
 			</section>
 
-			<section class="main-functionality">
+			<section class="main-functionality this-top-line-for-mobile">
 				<div class="n_container">
 					<h2 data-aos="fade-left" class="main-functionality__sec-title">Main<br> functionality</h2>
 					<div class="main-functionality__items">
-						<div class="main-functionality__item">
-							<div class="main-functionality__column vertical-bottom padding-left-mobile width-mobile-50">
+						<div class="main-functionality__item flex-mobile one">
+							<div class="main-functionality__column vertical-bottom padding-left-mobile padding-right-mobile width-mobile-100 js-card-effect-hover">
+								<div class="inner-shadow">
+									<div class="cursor-blur-wrapper">
+										<div class="cursor-blur"></div>
+									</div>
+								</div>
 								<p data-aos="fade-in" class="main-functionality__number">[02]</p>
 								<h3 data-aos="fade-in" class="main-functionality__title">Check the car's history</h3>
 								<p data-aos="fade-in" class="main-functionality__text">Get detailed information about a car's history to make an informed decision. Our platform will allow you to check the car's mileage, accident history, and the number of previous owners, giving you confidence and transparency in your purchase</p>
 							</div>
 							<div class="main-functionality__column hidden-mobile"></div>
-							<div class="main-functionality__column padding-right-mobile width-mobile-50">
+							<div class="main-functionality__column padding-left-mobile padding-right-mobile width-mobile-100 js-card-effect-hover">
+								<div class="inner-shadow">
+									<div class="cursor-blur-wrapper">
+										<div class="cursor-blur"></div>
+									</div>
+								</div>
 								<p data-aos="fade-in" class="main-functionality__number">[01]</p>
 								<h3 data-aos="fade-in" class="main-functionality__title">Search for a car by parameters</h3>
 								<p data-aos="fade-in" class="main-functionality__text">Easily filter cars by make, model, year of manufacture, mileage, or price. With advanced search options, you can quickly find the perfect car that matches your preferences, whether you're looking for a specific brand or a car within a particular price range</p>
 							</div>
 						</div>
-						<div class="main-functionality__item">
+						<div class="main-functionality__item two">
 							<div class="main-functionality__column hidden-mobile"></div>
-							<div class="main-functionality__column vertical-bottom padding-left-mobile padding-right-mobile width-mobile-100">
-								<p data-aos="fade-in" class="main-functionality__number">[03]</p>
-								<h3 data-aos="fade-in" class="main-functionality__title">Smart recommendations</h3>
-								<p data-aos="fade-in" class="main-functionality__text">Based on your preferences and search history, our app will provide personalized recommendations. You will receive offers that perfectly match your needs, making the buying process faster and more efficient</p>
-							</div>
-							<div class="main-functionality__column hidden-mobile"></div>
-						</div>
-						<div class="main-functionality__item">
-							<div class="main-functionality__column vertical-bottom padding-left-mobile width-mobile-50">
+							<div class="main-functionality__column vertical-bottom padding-left-mobile padding-right-mobile width-mobile-100 js-card-effect-hover">
+								<div class="inner-shadow">
+									<div class="cursor-blur-wrapper">
+										<div class="cursor-blur"></div>
+									</div>
+								</div>
 								<p data-aos="fade-in" class="main-functionality__number">[05]</p>
 								<h3 data-aos="fade-in" class="main-functionality__title">Smart recommendations</h3>
 								<p data-aos="fade-in" class="main-functionality__text">Based on your preferences and search history, our app will provide personalized recommendations. You will receive offers that perfectly match your needs, making the buying process faster and more efficient</p>
 							</div>
 							<div class="main-functionality__column hidden-mobile"></div>
-							<div class="main-functionality__column padding-right-mobile width-mobile-50">
+						</div>
+						<div class="main-functionality__item flex-mobile three">
+							<div class="main-functionality__column vertical-bottom padding-left-mobile padding-right-mobile width-mobile-100 js-card-effect-hover">
+								<div class="inner-shadow">
+									<div class="cursor-blur-wrapper">
+										<div class="cursor-blur"></div>
+									</div>
+								</div>
+								<p data-aos="fade-in" class="main-functionality__number">[03]</p>
+								<h3 data-aos="fade-in" class="main-functionality__title">Smart recommendations</h3>
+								<p data-aos="fade-in" class="main-functionality__text">Based on your preferences and search history, our app will provide personalized recommendations. You will receive offers that perfectly match your needs, making the buying process faster and more efficient</p>
+							</div>
+							<div class="main-functionality__column hidden-mobile"></div>
+							<div class="main-functionality__column padding-left-mobile padding-right-mobile width-mobile-100 js-card-effect-hover">
+								<div class="inner-shadow">
+									<div class="cursor-blur-wrapper">
+										<div class="cursor-blur"></div>
+									</div>
+								</div>
 								<p data-aos="fade-in" class="main-functionality__number">[04]</p>
 								<h3 data-aos="fade-in" class="main-functionality__title">Ads in a minute</h3>
 								<p data-aos="fade-in" class="main-functionality__text">Selling your car has never been easier. You can add a car for sale in just a few steps - upload high-quality photos, write a detailed description, and quickly post an ad for your vehicle. Whether you are selling your car privately or through a dealer, our platform ensures that your ad quickly reaches the right audience</p>
 							</div>
 						</div>
-						<div class="main-functionality__item">
+						<div class="main-functionality__item last">
 							<div class="main-functionality__column hidden-mobile"></div>
-							<div class="main-functionality__column padding-left-mobile padding-right-mobile width-mobile-100">
+							<div class="main-functionality__column padding-left-mobile padding-right-mobile width-mobile-100 js-card-effect-hover">
+								<div class="inner-shadow">
+									<div class="cursor-blur-wrapper">
+										<div class="cursor-blur"></div>
+									</div>
+								</div>
 								<p data-aos="fade-in" class="main-functionality__text big">We are actively working on this project to make the process of buying and selling a car even more convenient and safe for you.</p>
 							</div>
 							<div class="main-functionality__column hidden-mobile"></div>
@@ -719,9 +768,11 @@
    </div>
 </footer>
 	</div>
-	<script src="files/js/lenis.min.js?_v=20250313192600"></script>
-   <script src="js/script.min.js?_v=20250313192600"></script>
-	<script src="files/aos/aos.js?_v=20250313192600"></script>
-	<script src="files/js/gsap.min.js?_v=20250313192600" defer></script>
+	<script src="files/swiper/js/swiper-bundle.min.js?_v=20250315005711"></script>
+	<script src="files/swiper/js/init.js?_v=20250315005711"></script>
+	<script src="files/js/lenis.min.js?_v=20250315005711"></script>
+   <script src="js/script.min.js?_v=20250315005711"></script>
+	<script src="files/aos/aos.js?_v=20250315005711"></script>
+	<script src="files/js/gsap.min.js?_v=20250315005711" defer></script>
 </body>
 </html>

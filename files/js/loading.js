@@ -7,6 +7,15 @@ window.addEventListener('load', function () {
       setTimeout(() => {
          preloader.classList.add('loaded');
          document.documentElement.classList.remove('loading'); // Remove loading
+
+         // Добавляем анимацию после прелодера
+         let customAnimations = document.querySelectorAll('.custom-animation');
+         if (customAnimations) {
+            customAnimations.forEach(function(customAnimation) {
+               customAnimation.classList.add('show');
+            });
+         }
+
       }, delay);
    }
 });
